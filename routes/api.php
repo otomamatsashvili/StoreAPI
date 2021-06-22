@@ -15,14 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// Easier way of creating addresses
+
 Route::resource('products', ProductController::class);
 
-// Route::prefix('posts')->name('products.')->group( function(){
-//     Route::get('/products', [ProductController::Class, 'index']);
-//     Route::post('/products', [ProductController::Class, 'store']);
-//     Route::get('/products/{id}', [ProductController::Class, 'show']);
-//     Route::put('/products/{id}', [ProductController::Class, 'update']);
-//     Route::delete('/products/{id}', [ProductController::Class, 'destroy']);
+
+// Another method with Separated routes
+
+// Route::prefix('products')->group( function(){
+//     Route::get('', [ProductController::Class, 'index']);
+//     Route::post('', [ProductController::Class, 'store']);
+//     Route::get('{id}', [ProductController::Class, 'show']);
+//     Route::put('{id}', [ProductController::Class, 'update']);
+//     Route::delete('{id}', [ProductController::Class, 'destroy']);
 // });
 
 
